@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Groom Price Calculator</title>
+    <link rel="stylesheet" href="ass4styles.css">
+</head>
+
+<body>
+    <h1>Groom Price Calculator</h1>
+    <form id="priceForm">
+        <label for="name">Groom's Name:</label>
+        <input type="text" id="name" required>
+
+        <label for="startingBid">Starting Bid ($):</label>
+        <input type="number" id="startingBid" min="100" required>
+
+        <label for="education">Education:</label>
+        <select id="education">
+            <option></option>
+            <option value="1.5">Undergraduate degree</option>
+            <option value="1.2">College degree</option>
+            <option value="1.05">High school degree</option>
+            <option value="0.9">Middle school degree</option>
+        </select>
+
+        <label for="networth">Family Net Worth:</label>
+        <select id="networth">
+            <option></option>
+            <option value="2">More than 10,000$</option>
+            <option value="1.5">Between 5,000$ and 10,000$</option>
+            <option value="1.2">Less than 5,000$</option>
+        </select>
+
+        <label for="caste">Caste:</label>
+        <select id="caste">
+            <option></option>
+            <option value="100">Brahmin</option>
+            <option value="50">Kshatriya</option>
+            <option value="20">Vaishya</option>
+            <option value="10">Shudra</option>
+            <option value="-50">Varna - untouchable</option>
+        </select>
+
+
+        <label>Skills:</label>
+        <input type="checkbox" id="skills" value="10">Playing on a musical instrument<br>
+        <input type="checkbox" id="skills" value="20">Good cook<br>
+        <input type="checkbox" id="skills" value="15">Easygoing character<br>
+        <input type="checkbox" id="skills" value="10">Sings well<br>
+
+
+        <label>Age:</label>
+        <input type="radio" id="age18to23" name="age" value="1.5">18-23<br>
+        <input type="radio" id="age24to27" name="age" value="1.2">24-27<br>
+        <input type="radio" id="age28plus" name="age" value="0.95">28+<br>
+
+
+        <label>Reputation:</label>
+        <input type="checkbox" id="reputation" value="0.85">Gossips about parent's attitude<br>
+        <input type="checkbox" id="reputation" value="0.9">Gossips about character<br>
+        <input type="checkbox" id="reputation" value="-20">General gossips around person<br>
+
+
+        <label for="loveLetter">Love Letter (max 500 characters):</label>
+        <textarea id="loveLetter" maxlength="500"></textarea>
+
+        <button type="button" id="calculateBtn">Calculate Price</button>
+    </form>
+
+    <div id="result"></div>
+
+    <script src="ass4script.js"></script>
+</body>
+
+</html>
